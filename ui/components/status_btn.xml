@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+  <api>
+    <prop name="text" type="string" default="状态"/>
+    <prop name="bg_color" type="color" default="0xCCCCCC"/>
+  </api>
+
+  <view extends="lv_button" width="110" height="40"
+        style_bg_color="$bg_color"
+        style_border_width="0"
+        style_radius="0"
+        style_shadow_width="0">
+    <lv_label text="$text" style_text_color="#COLOR_WHITE" align="center"/>
+  </view>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+  <api>
+    <prop name="text" type="string" default="导航"/>
+    <prop name="bg_color" type="color" default="0xCCCCCC"/>
+    <prop name="is_active" type="bool" default="false"/>
+  </api>
+
+  <view extends="lv_button" width="158" height="70"
+        style_bg_color="$bg_color"
+        style_border_color="#COLOR_WHITE"
+        style_border_width="1"
+        style_radius="0"
+        style_shadow_width="0">
+    <lv_label text="$text" align="center">
+      <style name="style_nav_text"/>
+    </lv_label>
+  </view>
+</component>
