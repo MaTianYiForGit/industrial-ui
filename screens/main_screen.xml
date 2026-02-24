@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen name="main_screen">
+  <description>主控界面 - 800x480 工业控制屏幕</description>
+  
+  <content>
+    <!-- 主容器 -->
+    <lv_obj width="800" height="480"
+            bg_color="#COLOR_BG_MAIN"
+            pad_all="0"
+            layout="flex"
+            flex_flow="column">
+      
+      <!-- ========== 顶部状态栏 ========== -->
+      <lv_obj width="100%" height="50"
+              bg_opa="0"
+              border_width="0"
+              pad_all="0"
+              layout="flex"
+              flex_flow="row"
+              flex_align="space_between center">
+        
+        <!-- 左侧：状态按钮组 -->
+        <lv_obj width="330" height="50"
+                bg_opa="0"
+                border_width="0"
+                pad_all="0"
+                layout="flex"
+                flex_flow="row">
+          <status_btn text="联机" bg_color="#COLOR_STATUS_BLUE"/>
+          <status_btn text="运行" bg_color="#COLOR_STATUS_GREEN"/>
+          <status_btn text="本地" bg_color="#COLOR_STATUS_PINK"/>
+        </lv_obj>
+        
+        <!-- 中间：故障码显示 -->
+        <lv_obj width="250" height="50"
+                bg_opa="0"
+                border_width="0"
+                pad_all="0"
+                layout="flex"
+                flex_flow="row">
+          <lv_btn width="125" height="40"
+                  bg_color="#COLOR_STATUS_ORANGE"
+                  border_width="0"
+                  radius="0">
+            <lv_label text="故障代码"
+                      text_color="#COLOR_WHITE"
+                      text_font="font_normal"
+                      align="center"/>
+          </lv_btn>
+          <lv_obj width="125" height="40"
+                  bg_color="#COLOR_WHITE"
+                  border_color="#COLOR_GRAY_LIGHT"
+                  border_width="1"
+                  pad_all="0"
+                  layout="flex"
+                  flex_align="center center">
+            <lv_label text="-"
+                      text_color="#COLOR_BLACK"
+                      text_font="font_normal"/>
+          </lv_obj>
+        </lv_obj>
+        
+        <!-- 右侧：时间和厂家信息 -->
+        <lv_obj width="220" height="50"
+                bg_opa="0"
+                border_width="0"
+                pad_all="0"
+                layout="flex"
+                flex_flow="column">
+          <!-- 时间显示 -->
+          <lv_obj width="100%" height="25"
+                  bg_color="#COLOR_WHITE"
+                  border_color="#COLOR_GRAY_LIGHT"
+                  border_width="1"
+                  pad_all="0"
+                  layout="flex"
+                  flex_align="center center">
+            <lv_label text="2025 年 02 月 20 日 12:00"
+                      text_color="#COLOR_BLACK"
+                      text_font="font_small"/>
+          </lv_obj>
+          <!-- 厂家信息按钮 -->
+          <lv_btn width="100%" height="25"
+                  bg_color="#COLOR_STATUS_YELLOW"
+                  border_width="0"
+                  radius="0">
+            <lv_label text="厂家信息"
+                      text_color="#COLOR_BLACK"
+                      text_font="font_small"
+                      align="center"/>
+          </lv_btn>
+        </lv_obj>
+      </lv_obj>
+      
+      <!-- ========== 中间内容区 ========== -->
+      <lv_obj width="100%" height="350"
+              bg_opa="0"
+              border_width="0"
+              pad_all="0"
+              layout="flex"
+              flex_flow="row"
+              flex_align="space_between start">
+        
+        <!-- 左侧：参数列表 -->
+        <lv_obj width="280" height="100%"
+                bg_opa="0"
+                border_width="0"
+                pad_all="0"
+                layout="flex"
+                flex_flow="column">
+          <param_item label="输出能量值" value="60.0" unit="kW"/>
+          <param_item label="输入交流电压值" value="380" unit="V"/>
+          <param_item label="输入交流电流值" value="120.5" unit="A"/>
+          <param_item label="直流母线电压值" value="540" unit="V"/>
+          <param_item label="直流母线电流值" value="90.0" unit="A"/>
+          <param_item label="输出高频电压值" value="2500" unit="V"/>
+          <param_item label="输出高频电流值" value="120.0" unit="A"/>
+          <param_item label="输出频率值" value="30.0" unit="kHz"/>
+          <param_item label="能量使用率" value="75.0" unit="%"/>
+        </lv_obj>
+        
+        <!-- 中间：监控卡片1（绿色） -->
+        <lv_obj width="260" height="100%"
+                bg_opa="0"
+                border_width="0"
+                pad_all="0"
+                layout="flex"
+                flex_flow="column"
+                flex_align="start center">
+          <monitor_card title="参数号" 
+                       value="040" 
+                       unit=""
+                       color_dark="#COLOR_MONITOR_GREEN_DARK"
+                       color_light="#COLOR_MONITOR_GREEN_LIGHT"/>
+          
+          <!-- 下方输入框组 -->
+          <lv_obj width="100%" height="70"
+                  bg_opa="0"
+                  border_width="0"
+                  pad_top="10"
+                  layout="flex"
+                  flex_flow="column">
+            <lv_obj width="100%" height="30"
+                    bg_color="#COLOR_WHITE"
+                    border_color="#COLOR_GRAY_LIGHT"
+                    border_width="1"
+                    pad_all="0"
+                    layout="flex"
+                    flex_flow="row"
+                    flex_align="space_between center">
+              <lv_label text="数字输入端子状态值"
+                        text_color="#COLOR_GRAY_TEXT"
+                        text_font="font_small"
+                        pad_left="8"/>
+              <lv_label text="'F0AC"
+                        text_color="#COLOR_BLACK"
+                        text_font="font_small"
+                        pad_right="8"/>
+            </lv_obj>
+            <lv_obj width="100%" height="30"
+                    bg_color="#COLOR_WHITE"
+                    border_color="#COLOR_GRAY_LIGHT"
+                    border_width="1"
+                    pad_all="0"
+                    layout="flex"
+                    flex_flow="row"
+                    flex_align="space_between center">
+              <lv_label text="数字输出端子状态值"
+                        text_color="#COLOR_GRAY_TEXT"
+                        text_font="font_small"
+                        pad_left="8"/>
+              <lv_label text="'F000"
+                        text_color="#COLOR_BLACK"
+                        text_font="font_small"
+                        pad_right="8"/>
+            </lv_obj>
+          </lv_obj>
+        </lv_obj>
+        
+        <!-- 右侧：监控卡片2（蓝色）+ 模拟信号 -->
+        <lv_obj width="260" height="100%"
+                bg_opa="0"
+                border_width="0"
+                pad_all="0"
+                layout="flex"
+                flex_flow="column"
+                flex_align="start center">
+          <monitor_card title="参数值" 
+                       value="60.0" 
+                       unit="kW"
+                       color_dark="#COLOR_MONITOR_BLUE_DARK"
+                       color_light="#COLOR_MONITOR_BLUE_LIGHT"/>
+          
+          <!-- 下方模拟信号输入框组 -->
+          <lv_obj width="100%" height="70"
+                  bg_opa="0"
+                  border_width="0"
+                  pad_top="10"
+                  layout="flex"
+                  flex_flow="column">
+            <lv_obj width="100%" height="30"
+                    bg_color="#COLOR_WHITE"
+                    border_color="#COLOR_GRAY_LIGHT"
+                    border_width="1"
+                    pad_all="0"
+                    layout="flex"
+                    flex_flow="row"
+                    flex_align="space_between center">
+              <lv_label text="模拟信号 1 转换值"
+                        text_color="#COLOR_GRAY_TEXT"
+                        text_font="font_small"
+                        pad_left="8"/>
+              <lv_label text="'0250"
+                        text_color="#COLOR_BLACK"
+                        text_font="font_small"
+                        pad_right="8"/>
+            </lv_obj>
+            <lv_obj width="100%" height="30"
+                    bg_color="#COLOR_WHITE"
+                    border_color="#COLOR_GRAY_LIGHT"
+                    border_width="1"
+                    pad_all="0"
+                    layout="flex"
+                    flex_flow="row"
+                    flex_align="space_between center">
+              <lv_label text="模拟信号 2 转换值"
+                        text_color="#COLOR_GRAY_TEXT"
+                        text_font="font_small"
+                        pad_left="8"/>
+              <lv_label text="'0000"
+                        text_color="#COLOR_BLACK"
+                        text_font="font_small"
+                        pad_right="8"/>
+            </lv_obj>
+          </lv_obj>
+        </lv_obj>
+      </lv_obj>
+      
+      <!-- ========== 底部导航栏 ========== -->
+      <lv_obj width="100%" height="80"
+              bg_opa="0"
+              border_width="0"
+              pad_all="0"
+              layout="flex"
+              flex_flow="row">
+        <nav_tab text="主控界面" bg_color="#COLOR_NAV_GRAY"/>
+        <nav_tab text="数据监控" bg_color="#COLOR_NAV_BLUE"/>
+        <nav_tab text="参数设定" bg_color="#COLOR_NAV_GREEN"/>
+        <nav_tab text="分段设定" bg_color="#COLOR_NAV_GRAY"/>
+        <nav_tab text="故障信息" bg_color="#COLOR_NAV_ORANGE"/>
+      </lv_obj>
+    </lv_obj>
+  </content>
+</screen>

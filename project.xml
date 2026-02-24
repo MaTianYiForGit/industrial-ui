@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Industrial Control UI" 
+         version="1.0.0"
+         screen_width="800"
+         screen_height="480"
+         default_screen="main_screen">
+  <description>NUC977 工业控制界面 - 800x480分辨率</description>
+  <author>Industrial Control System</author>
+</project>

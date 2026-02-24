@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="monitor_card">
+  <description>监控卡片组件：显示大数字监控值</description>
+  
+  <params>
+    <param name="title" type="string" default="监控参数" help="标题文字"/>
+    <param name="value" type="string" default="0" help="监控数值"/>
+    <param name="unit" type="string" default="" help="单位"/>
+    <param name="color_dark" type="color" default="0x009966" help="深色背景"/>
+    <param name="color_light" type="color" default="0x99CC66" help="浅色背景"/>
+  </params>
+  
+  <content>
+    <!-- 卡片主容器 -->
+    <lv_obj width="250" height="280"
+            bg_opa="0"
+            border_width="0"
+            pad_all="0"
+            layout="flex"
+            flex_flow="row">
+      
+      <!-- 左侧深色区域（标题） -->
+      <lv_obj width="50%" height="100%"
+              bg_color="$color_dark"
+              border_width="0"
+              pad_all="0"
+              layout="flex"
+              flex_flow="column"
+              flex_align="center center">
+        
+        <lv_label text="监控"
+                  style="style_monitor_title"
+                  width="content"/>
+        <lv_label text="$title"
+                  style="style_monitor_title"
+                  width="content"/>
+      </lv_obj>
+      
+      <!-- 右侧浅色区域（数值） -->
+      <lv_obj width="50%" height="100%"
+              bg_color="$color_light"
+              border_width="0"
+              pad_all="0"
+              layout="flex"
+              flex_flow="column"
+              flex_align="center center">
+        
+        <lv_label text="$value"
+                  style="style_monitor_value"
+                  width="content"/>
+        <lv_label text="$unit"
+                  text_color="#COLOR_BLACK"
+                  text_font="font_medium"
+                  width="content"/>
+      </lv_obj>
+    </lv_obj>
+  </content>
+</component>

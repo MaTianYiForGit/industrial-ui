@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="param_item">
+  <description>参数行组件：显示标签 + 数值 + 单位</description>
+  
+  <params>
+    <param name="label" type="string" default="" help="参数标签"/>
+    <param name="value" type="string" default="0" help="参数数值"/>
+    <param name="unit" type="string" default="" help="单位"/>
+  </params>
+  
+  <content>
+    <!-- 参数行容器 -->
+    <lv_obj width="280" height="48" 
+            bg_color="#COLOR_WHITE" 
+            border_color="#COLOR_GRAY_LIGHT" 
+            border_width="1"
+            pad_all="0"
+            layout="flex"
+            flex_flow="row"
+            flex_align="space_between center">
+      
+      <!-- 左侧标签 -->
+      <lv_label text="$label" 
+                style="style_param_label"
+                width="120"
+                pad_left="8"/>
+      
+      <!-- 右侧容器：数值+单位 -->
+      <lv_obj width="150" height="content"
+              bg_opa="0"
+              border_width="0"
+              layout="flex"
+              flex_flow="row"
+              flex_align="end center"
+              pad_right="8">
+        
+        <!-- 数值 -->
+        <lv_label text="$value" 
+                  style="style_param_value"
+                  width="100"/>
+        
+        <!-- 单位 -->
+        <lv_label text="$unit" 
+                  style="style_param_unit"
+                  width="40"/>
+      </lv_obj>
+    </lv_obj>
+  </content>
+</component>

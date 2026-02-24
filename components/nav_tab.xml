@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="nav_tab">
+  <description>底部导航按钮组件</description>
+  
+  <params>
+    <param name="text" type="string" default="导航" help="导航文字"/>
+    <param name="bg_color" type="color" default="0xCCCCCC" help="背景颜色"/>
+    <param name="is_active" type="bool" default="false" help="是否激活"/>
+  </params>
+  
+  <content>
+    <lv_btn width="158" height="70"
+            bg_color="$bg_color"
+            border_color="#COLOR_WHITE"
+            border_width="1"
+            radius="0"
+            shadow_width="0">
+      <lv_label text="$text"
+                style="style_nav_text"
+                align="center"/>
+    </lv_btn>
+  </content>
+</component>
