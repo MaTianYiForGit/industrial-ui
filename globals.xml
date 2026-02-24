@@ -1,83 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globals>
-  <!-- 颜色定义 -->
-  <const name="COLOR_BG_MAIN" type="color" value="0xF0F0F0" help="主背景色"/>
-  <const name="COLOR_WHITE" type="color" value="0xFFFFFF" help="白色"/>
-  <const name="COLOR_BLACK" type="color" value="0x000000" help="黑色"/>
-  <const name="COLOR_GRAY_LIGHT" type="color" value="0xE0E0E0" help="浅灰"/>
-  <const name="COLOR_GRAY_TEXT" type="color" value="0x404040" help="文字灰"/>
-  
-  <!-- 状态按钮颜色 -->
-  <const name="COLOR_STATUS_BLUE" type="color" value="0x0099CC" help="联机蓝"/>
-  <const name="COLOR_STATUS_GREEN" type="color" value="0x00CC66" help="运行绿"/>
-  <const name="COLOR_STATUS_PINK" type="color" value="0xFF99CC" help="本地粉"/>
-  <const name="COLOR_STATUS_ORANGE" type="color" value="0xCC6633" help="故障橙"/>
-  <const name="COLOR_STATUS_YELLOW" type="color" value="0xFFCC00" help="厂家信息黄"/>
-  
-  <!-- 监控卡片颜色 -->
-  <const name="COLOR_MONITOR_GREEN_DARK" type="color" value="0x009966" help="监控绿深"/>
-  <const name="COLOR_MONITOR_GREEN_LIGHT" type="color" value="0x99CC66" help="监控绿浅"/>
-  <const name="COLOR_MONITOR_BLUE_DARK" type="color" value="0x0099CC" help="监控蓝深"/>
-  <const name="COLOR_MONITOR_BLUE_MID" type="color" value="0x66CCFF" help="监控蓝中"/>
-  <const name="COLOR_MONITOR_BLUE_LIGHT" type="color" value="0xCCEEFF" help="监控蓝浅"/>
-  
-  <!-- 导航栏颜色 -->
-  <const name="COLOR_NAV_GRAY" type="color" value="0xCCCCCC" help="导航灰"/>
-  <const name="COLOR_NAV_BLUE" type="color" value="0x0099CC" help="导航蓝"/>
-  <const name="COLOR_NAV_GREEN" type="color" value="0x00CC66" help="导航绿"/>
-  <const name="COLOR_NAV_ORANGE" type="color" value="0xFF6600" help="导航橙"/>
-  
-  <!-- 字体定义（使用 LVGL 内置字体，根据实际需要调整）-->
-  <font name="font_title" family="montserrat" size="18" weight="bold" help="标题字体"/>
-  <font name="font_normal" family="montserrat" size="14" weight="normal" help="正常字体"/>
-  <font name="font_small" family="montserrat" size="12" weight="normal" help="小字体"/>
-  <font name="font_large" family="montserrat" size="48" weight="bold" help="大数字字体"/>
-  <font name="font_medium" family="montserrat" size="24" weight="normal" help="中等数字"/>
-  
-  <!-- 通用样式 -->
-  <style name="style_param_label" 
-         text_color="#COLOR_GRAY_TEXT" 
-         text_font="font_normal"
-         bg_opa="0"
-         border_width="0"
-         pad_all="4"
-         help="参数标签样式"/>
-  
-  <style name="style_param_value" 
-         text_color="#COLOR_BLACK" 
-         text_font="font_medium"
-         text_align="right"
-         bg_opa="0"
-         border_width="0"
-         pad_all="4"
-         help="参数数值样式"/>
-  
-  <style name="style_param_unit" 
-         text_color="#COLOR_GRAY_TEXT" 
-         text_font="font_small"
-         bg_opa="0"
-         border_width="0"
-         pad_all="4"
-         help="参数单位样式"/>
-  
-  <style name="style_monitor_title" 
-         text_color="#COLOR_WHITE" 
-         text_font="font_title"
-         bg_opa="0"
-         text_align="center"
-         help="监控卡片标题样式"/>
-  
-  <style name="style_monitor_value" 
-         text_color="#COLOR_BLACK" 
-         text_font="font_large"
-         bg_opa="0"
-         text_align="center"
-         help="监控卡片数值样式"/>
-  
-  <style name="style_nav_text" 
-         text_color="#COLOR_GRAY_TEXT" 
-         text_font="font_normal"
-         bg_opa="0"
-         text_align="center"
-         help="导航文字样式"/>
+  <consts>
+    <color name="COLOR_BG_MAIN" value="0xF0F0F0" help="主背景色"/>
+    <color name="COLOR_WHITE" value="0xFFFFFF" help="白色"/>
+    <color name="COLOR_BLACK" value="0x000000" help="黑色"/>
+    <color name="COLOR_GRAY_LIGHT" value="0xE0E0E0" help="浅灰"/>
+    <color name="COLOR_GRAY_TEXT" value="0x404040" help="文字灰"/>
+
+    <color name="COLOR_STATUS_BLUE" value="0x0099CC" help="联机蓝"/>
+    <color name="COLOR_STATUS_GREEN" value="0x00CC66" help="运行绿"/>
+    <color name="COLOR_STATUS_PINK" value="0xFF99CC" help="本地粉"/>
+    <color name="COLOR_STATUS_ORANGE" value="0xCC6633" help="故障橙"/>
+    <color name="COLOR_STATUS_YELLOW" value="0xFFCC00" help="厂家信息黄"/>
+
+    <color name="COLOR_MONITOR_GREEN_DARK" value="0x009966" help="监控绿深"/>
+    <color name="COLOR_MONITOR_GREEN_LIGHT" value="0x99CC66" help="监控绿浅"/>
+    <color name="COLOR_MONITOR_BLUE_DARK" value="0x0099CC" help="监控蓝深"/>
+    <color name="COLOR_MONITOR_BLUE_MID" value="0x66CCFF" help="监控蓝中"/>
+    <color name="COLOR_MONITOR_BLUE_LIGHT" value="0xCCEEFF" help="监控蓝浅"/>
+
+    <color name="COLOR_NAV_GRAY" value="0xCCCCCC" help="导航灰"/>
+    <color name="COLOR_NAV_BLUE" value="0x0099CC" help="导航蓝"/>
+    <color name="COLOR_NAV_GREEN" value="0x00CC66" help="导航绿"/>
+    <color name="COLOR_NAV_ORANGE" value="0xFF6600" help="导航橙"/>
+  </consts>
+
+  <styles>
+    <style name="style_param_label"
+           text_color="#COLOR_GRAY_TEXT"
+           bg_opa="0"
+           border_width="0"
+           pad_all="4"/>
+
+    <style name="style_param_value"
+           text_color="#COLOR_BLACK"
+           text_align="right"
+           bg_opa="0"
+           border_width="0"
+           pad_all="4"/>
+
+    <style name="style_param_unit"
+           text_color="#COLOR_GRAY_TEXT"
+           bg_opa="0"
+           border_width="0"
+           pad_all="4"/>
+
+    <style name="style_monitor_title"
+           text_color="#COLOR_WHITE"
+           bg_opa="0"
+           text_align="center"/>
+
+    <style name="style_monitor_value"
+           text_color="#COLOR_BLACK"
+           bg_opa="0"
+           text_align="center"/>
+
+    <style name="style_nav_text"
+           text_color="#COLOR_GRAY_TEXT"
+           bg_opa="0"
+           text_align="center"/>
+  </styles>
 </globals>

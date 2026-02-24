@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component name="status_btn">
-  <description>状态按钮组件：顶部状态显示按钮</description>
-  
-  <params>
-    <param name="text" type="string" default="状态" help="按钮文字"/>
-    <param name="bg_color" type="color" default="0xCCCCCC" help="背景颜色"/>
-  </params>
-  
-  <content>
-    <lv_btn width="110" height="40"
-            bg_color="$bg_color"
-            border_width="0"
-            radius="0"
-            shadow_width="0">
-      <lv_label text="$text"
-                text_color="#COLOR_WHITE"
-                text_font="font_normal"
-                align="center"/>
-    </lv_btn>
-  </content>
+<component>
+  <api>
+    <prop name="text" type="string" default="状态"/>
+    <prop name="bg_color" type="color" default="0xCCCCCC"/>
+  </api>
+
+  <view extends="lv_button" width="110" height="40"
+        style_bg_color="$bg_color"
+        style_border_width="0"
+        style_radius="0"
+        style_shadow_width="0">
+    <lv_label text="$text" style_text_color="#COLOR_WHITE" align="center"/>
+  </view>
 </component>
