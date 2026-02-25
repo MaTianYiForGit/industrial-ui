@@ -12,7 +12,7 @@
         style_bg_opa="0"
         style_border_width="0"
         style_pad_all="0"
-        flex_flow="row">
+        style_flex_flow="row">
     <lv_obj width="50%" height="100%"
             style_bg_color="$color_dark"
             style_border_width="0"
@@ -20,11 +20,15 @@
             style_flex_flow="column"
             style_flex_main_place="center"
             style_flex_cross_place="center">
-      <lv_label text="监控" width="content">
-        <style name="style_monitor_title"/>
+      <lv_label text="监控" width="content"
+                style_text_color="#COLOR_WHITE"
+                style_bg_opa="0"
+                style_text_align="center">
       </lv_label>
-      <lv_label text="$title" width="content">
-        <style name="style_monitor_title"/>
+      <lv_label text="$title" width="content"
+                style_text_color="#COLOR_WHITE"
+                style_bg_opa="0"
+                style_text_align="center">
       </lv_label>
     </lv_obj>
 
@@ -35,8 +39,10 @@
             style_flex_flow="column"
             style_flex_main_place="center"
             style_flex_cross_place="center">
-      <lv_label text="$value" width="content">
-        <style name="style_monitor_value"/>
+      <lv_label text="$value" width="content"
+                style_text_color="#COLOR_BLACK"
+                style_bg_opa="0"
+                style_text_align="center">
       </lv_label>
       <lv_label text="$unit" width="content" style_text_color="#COLOR_BLACK"/>
     </lv_obj>

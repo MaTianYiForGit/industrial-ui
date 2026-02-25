@@ -14,8 +14,12 @@
         style_flex_flow="row"
         style_flex_main_place="space_between"
         style_flex_cross_place="center">
-    <lv_label text="$label" width="120" style_pad_left="8">
-      <style name="style_param_label"/>
+    <lv_label text="$label" width="120" 
+              style_pad_left="8"
+              style_text_color="#COLOR_GRAY_TEXT"
+              style_bg_opa="0"
+              style_border_width="0"
+              style_pad_all="4">
     </lv_label>
 
     <lv_obj width="150" height="content"
@@ -25,12 +29,19 @@
             style_flex_main_place="end"
             style_flex_cross_place="center"
             style_pad_right="8">
-      <lv_label text="$value" width="100">
-        <style name="style_param_value"/>
+      <lv_label text="$value" width="100"
+                style_text_color="#COLOR_BLACK"
+                style_text_align="right"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_all="4">
       </lv_label>
 
-      <lv_label text="$unit" width="40">
-        <style name="style_param_unit"/>
+      <lv_label text="$unit" width="40"
+                style_text_color="#COLOR_GRAY_TEXT"
+                style_bg_opa="0"
+                style_border_width="0"
+                style_pad_all="4">
       </lv_label>
     </lv_obj>
   </view>

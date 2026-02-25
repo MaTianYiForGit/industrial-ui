@@ -24,40 +24,4 @@
     <color name="COLOR_NAV_GREEN" value="0x00CC66" help="导航绿"/>
     <color name="COLOR_NAV_ORANGE" value="0xFF6600" help="导航橙"/>
   </consts>
-
-  <styles>
-    <style name="style_param_label"
-           text_color="#COLOR_GRAY_TEXT"
-           bg_opa="0"
-           border_width="0"
-           pad_all="4"/>
-
-    <style name="style_param_value"
-           text_color="#COLOR_BLACK"
-           text_align="right"
-           bg_opa="0"
-           border_width="0"
-           pad_all="4"/>
-
-    <style name="style_param_unit"
-           text_color="#COLOR_GRAY_TEXT"
-           bg_opa="0"
-           border_width="0"
-           pad_all="4"/>
-
-    <style name="style_monitor_title"
-           text_color="#COLOR_WHITE"
-           bg_opa="0"
-           text_align="center"/>
-
-    <style name="style_monitor_value"
-           text_color="#COLOR_BLACK"
-           bg_opa="0"
-           text_align="center"/>
-
-    <style name="style_nav_text"
-           text_color="#COLOR_GRAY_TEXT"
-           bg_opa="0"
-           text_align="center"/>
-  </styles>
 </globals>
