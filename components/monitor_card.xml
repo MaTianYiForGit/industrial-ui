@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <component>
   <api>
     <prop name="title" type="string" default="监控参数"/>
