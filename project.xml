@@ -1,6 +1,6 @@
 <project name="industrial_control_ui">
 	<targets>
-		<target name="target1">
+		<target name="full_view">
 			<display width="800" height="480" />
 		</target>
 	</targets>
