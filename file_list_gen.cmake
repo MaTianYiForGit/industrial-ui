@@ -1,0 +1,10 @@
+list(
+  APPEND
+  LV_EDITOR_PROJECT_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/components/monitor_card_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/nav_tab_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/param_item_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/status_btn_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/industrial_control_ui_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/industrial_control_ui.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/main_screen_gen.c)
